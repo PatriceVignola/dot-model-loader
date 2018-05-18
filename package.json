@@ -1,0 +1,60 @@
+{
+  "name": "wwdc2010-model-loader",
+  "version": "1.0.0",
+  "description": "A model loader for Apple's .model format found in the WWDC2010 GLEssentials example",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "flow": "flow start",
+    "build-clean": "rm -rf lib && rm -rf dist",
+    "build-lib": "babel src -d lib",
+    "build-dist": "webpack",
+    "build": "yarn build-clean && yarn build-lib && yarn build-dist",
+    "prepublish": "yarn build",
+    "prepare": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatriceVignola/wwdc2010-model-loader.git"
+  },
+  "keywords": [
+    "wwdc2010",
+    "glessentials",
+    "3d",
+    "model",
+    "loader",
+    "opengl",
+    "webgl"
+  ],
+  "author": "Patrice Vignola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatriceVignola/wwdc2010-model-loader/issues"
+  },
+  "homepage": "https://github.com/PatriceVignola/wwdc2010-model-loader#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "flow-bin": "^0.72.0",
+    "jest": "^22.4.3",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  }
+}

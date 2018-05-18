@@ -11,7 +11,6 @@
     "build-lib": "babel src -d lib",
     "build-dist": "webpack",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist",
-    "prepublish": "yarn build",
     "prepare": "yarn build"
   },
   "repository": {

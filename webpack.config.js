@@ -43,6 +43,7 @@ const dev = {
     libraryExport: 'default',
   },
   module: { rules },
+  mode: 'development',
 };
 
 const release = {
@@ -56,6 +57,7 @@ const release = {
     libraryExport: 'default',
   },
   module: { rules },
+  mode: 'production',
 }; 
 
 module.exports = [dev, release];

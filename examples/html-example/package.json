@@ -4,11 +4,9 @@
   "description": "HTML + JavaScript example for the wwdc2010-model-loader module",
   "main": "example.js",
   "scripts": {
+    "install": "npm pack ../../ && npm install *.tgz --no-save && rm *.tgz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patrice Vignola",
-  "license": "MIT",
-  "dependencies": {
-    "wwdc2010-model-loader": "file:../.."
-  }
+  "license": "MIT"
 }

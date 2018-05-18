@@ -1,4 +1,10 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["transform-flow-strip-types"],
+  "presets": ["es2015", "jest"],
+  "plugins": [
+    "transform-flow-strip-types",
+    "transform-es2015-modules-commonjs",
+  ],
+  "ignore": [
+    "lib/*.test.js",
+  ],
 }

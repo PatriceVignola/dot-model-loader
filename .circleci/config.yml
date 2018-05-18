@@ -23,6 +23,13 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
        
-      - run: yarn build
-      - run: yarn test
-      - run: mv dist/* $CIRCLE_ARTIFACTS
+      - run:
+          name: Building
+          command: yarn build
+
+      - run:
+          name: Testing
+          command: yarn test
+
+      - store_artifacts:
+          path: dist

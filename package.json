@@ -4,7 +4,7 @@
   "description": "A model loader for Apple's .model format found in the WWDC2010 GLEssentials example",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint .",
     "flow": "flow",
     "prettier": "prettier es6 --write src/**/*.js",

@@ -10,8 +10,18 @@
     "import",
     "flowtype",
     "jest",
+    "prettier",
   ],
   "env": {
     "jest": true,
+  },
+  "rules": {
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-unused-expressions": [2, { "allowShortCircuit": true }],
+    "function-paren-newline": [0],
+    "prettier/prettier": [2, "fb", "@format"],
+    "object-curly-spacing": [0],
+    "no-mixed-operators": [0],
+    "no-bitwise": [2, "allow": ["<<", ">>"]],
   },
 }

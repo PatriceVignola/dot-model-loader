@@ -4,16 +4,17 @@
   "description": "A model loader for Apple's .model format found in the WWDC2010 GLEssentials example",
   "main": "index.js",
   "scripts": {
+    "prettier": "prettier es6 --write src/**/*.js",
     "test": "jest --coverage",
     "lint": "eslint .",
     "flow": "flow",
-    "prettier": "prettier es6 --write src/**/*.js",
     "validate": "run-p lint flow test --silent",
     "build-clean": "rimraf lib && rimraf dist",
     "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
     "build-dist": "webpack",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "precommit": "yarn prettier && yarn validate"
   },
   "repository": {
     "type": "git",
@@ -64,6 +65,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "husky": "^0.14.3"
   }
 }

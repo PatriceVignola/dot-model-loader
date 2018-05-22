@@ -22,14 +22,14 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-       
-      - run:
-          name: Building
-          command: yarn build
 
       - run:
-          name: Testing
-          command: yarn test
+          name: Vaidating
+          command: yarn validate
+
+      - run:
+          name: Generating Coveralls Report
+          command: yarn coveralls < coverage/lcov.info
 
       - store_artifacts:
           path: dist

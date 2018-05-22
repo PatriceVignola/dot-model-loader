@@ -9,7 +9,7 @@
     "flow": "flow",
     "prettier": "prettier es6 --write src/**/*.js",
     "build-clean": "rimraf lib && rimraf dist",
-    "build-lib": "babel src -d lib --ignore '**/*.test.js' && yarn flow gen-flow-files --out-dir lib/ src/",
+    "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
     "build-dist": "webpack",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist",
     "prepare": "yarn build"

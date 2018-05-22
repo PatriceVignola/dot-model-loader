@@ -2,4 +2,8 @@
 **/__tests__/**
 **/*.test.js
 **/*.model
+models/**
 examples/**
+flow-typed/**
+coverage/**
+webpack.config.js

@@ -6,14 +6,14 @@
 import fs from 'fs';
 import path from 'path';
 
-import Wwdc2010ModelLoader from './Wwdc2010ModelLoader';
+import DotModelLoader from './DotModelLoader';
 
-describe('Wwdc2010ModelLoader', () => {
+describe('DotModelLoader', () => {
   const modelPath = path.resolve(__dirname, '../../models', 'demon.model');
   const {buffer} = fs.readFileSync(modelPath);
 
   it('parses the model correctly', async () => {
-    const model = Wwdc2010ModelLoader.load(buffer);
+    const model = DotModelLoader.load(buffer);
     expect(model.indices).toMatchSnapshot(); // 36120 indices
     expect(model.vertexCoordinates).toMatchSnapshot(); // 26310 vertex coords
     expect(model.uvCoordinates).toMatchSnapshot(); // 17540 UV coords
@@ -38,7 +38,7 @@ describe('Wwdc2010ModelLoader', () => {
       dataView.setUint16(startPos + i * 2, current, true);
     }
 
-    const model = Wwdc2010ModelLoader.load(newBuffer);
+    const model = DotModelLoader.load(newBuffer);
     expect(model.indices).toMatchSnapshot();
   });
 
@@ -60,7 +60,7 @@ describe('Wwdc2010ModelLoader', () => {
       dataView.setUint8(startPos + i, current);
     }
 
-    const model = Wwdc2010ModelLoader.load(newBuffer);
+    const model = DotModelLoader.load(newBuffer);
     expect(model.indices).toMatchSnapshot();
   });
 
@@ -84,7 +84,7 @@ describe('Wwdc2010ModelLoader', () => {
       dataView.setFloat64(startPos + i * 8, current, true);
     }
 
-    const model = Wwdc2010ModelLoader.load(newBuffer);
+    const model = DotModelLoader.load(newBuffer);
     expect(model.vertexCoordinates).toMatchSnapshot();
   });
 
@@ -109,7 +109,7 @@ describe('Wwdc2010ModelLoader', () => {
       dataView.setFloat64(startPos + i * 8, current, true);
     }
 
-    const model = Wwdc2010ModelLoader.load(newBuffer);
+    const model = DotModelLoader.load(newBuffer);
     expect(model.uvCoordinates).toMatchSnapshot();
   });
 
@@ -134,7 +134,7 @@ describe('Wwdc2010ModelLoader', () => {
       dataView.setFloat64(startPos + i * 8, current, true);
     }
 
-    const model = Wwdc2010ModelLoader.load(newBuffer);
+    const model = DotModelLoader.load(newBuffer);
     expect(model.normalCoordinates).toMatchSnapshot();
   });
 
@@ -145,7 +145,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for indices: 999');
   });
 
@@ -156,7 +156,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for faces: 999');
   });
 
@@ -167,7 +167,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError(
       'Mismatch between the size of the index buffer and the number of indices',
     );
@@ -180,7 +180,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for vertex coordinates: 999');
   });
 
@@ -191,7 +191,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for vertices: 999');
   });
 
@@ -202,7 +202,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid number of coordinates per vertex: 999');
   });
 
@@ -217,7 +217,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, numVertices * 2, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError(
       'Mismatch between the size of the vertex buffer and the number of vertices: 2',
     );
@@ -230,7 +230,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for UV coordinates: 999');
   });
 
@@ -241,7 +241,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for UVs: 999');
   });
 
@@ -252,7 +252,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid number of coordinates per UV: 999');
   });
 
@@ -267,7 +267,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, numUV * 2, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError(
       'Mismatch between the size of the UV buffer and the number of UVs: 2',
     );
@@ -280,7 +280,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for normal coordinates: 999');
   });
 
@@ -291,7 +291,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid type for normals: 999');
   });
 
@@ -302,7 +302,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, 999, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError('Invalid number of coordinates per normal: 999');
   });
 
@@ -317,7 +317,7 @@ describe('Wwdc2010ModelLoader', () => {
     dataView.setUint32(0, numUV * 2, true);
 
     expect(() => {
-      Wwdc2010ModelLoader.load(badBuffer);
+      DotModelLoader.load(badBuffer);
     }).toThrowError(
       'Mismatch between the size of the normal buffer and the number of normals: 2',
     );

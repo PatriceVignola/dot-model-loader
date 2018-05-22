@@ -1,7 +1,7 @@
 {
-  "name": "wwdc2010-model-loader",
+  "name": "dot-model-loader",
   "version": "1.0.0",
-  "description": "A model loader for Apple's .model format found in the WWDC2010 GLEssentials example",
+  "description": "A lightweight JavaScript loader for .model 3D files",
   "main": "index.js",
   "scripts": {
     "prettier": "prettier es6 --write src/**/*.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PatriceVignola/wwdc2010-model-loader.git"
+    "url": "git+https://github.com/PatriceVignola/dot-model-loader.git"
   },
   "keywords": [
     "wwdc2010",
@@ -32,9 +32,9 @@
   "author": "Patrice Vignola",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PatriceVignola/wwdc2010-model-loader/issues"
+    "url": "https://github.com/PatriceVignola/dot-model-loader/issues"
   },
-  "homepage": "https://github.com/PatriceVignola/wwdc2010-model-loader#readme",
+  "homepage": "https://github.com/PatriceVignola/dot-model-loader#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

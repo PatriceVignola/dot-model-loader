@@ -3,6 +3,6 @@
  * @flow
  */
 
-import Wwdc2010ModelLoader from './loaders/Wwdc2010ModelLoader';
+import DotModelLoader from './loaders/DotModelLoader';
 
-export default Wwdc2010ModelLoader;
+export default DotModelLoader;

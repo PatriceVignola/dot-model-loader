@@ -1,7 +1,7 @@
 {
-  "name": "wwdc2010-model-loader-html-example",
+  "name": "dot-model-loader-html-example",
   "version": "1.0.0",
-  "description": "HTML + JavaScript example for the wwdc2010-model-loader module",
+  "description": "Pure JavaScript example for the dot-model-loader module",
   "main": "example.js",
   "scripts": {
     "install": "npm install rimraf --no-save && rimraf node_modules && npm pack ../../ && npm install *.tgz --no-save",

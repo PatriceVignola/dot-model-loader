@@ -6,8 +6,8 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const libraryName = 'Wwdc2010ModelLoader';
-const distName = 'wwdc2010-model-loader';
+const libraryName = 'DotModelLoader';
+const distName = 'dot-model-loader';
 const distPath = `${__dirname}/dist`;
 const entry = `${__dirname}/src/index.js`;
 

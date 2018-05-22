@@ -175,7 +175,7 @@ function parseNormalCoordinates(streamReader: StreamReader): number[] {
   );
 }
 
-class Wwdc2010ModelLoader {
+class DotModelLoader {
   static load(buffer: ArrayBuffer) {
     const streamReader = new StreamReader(buffer, true);
 
@@ -217,4 +217,4 @@ class Wwdc2010ModelLoader {
   }
 }
 
-export default Wwdc2010ModelLoader;
+export default DotModelLoader;

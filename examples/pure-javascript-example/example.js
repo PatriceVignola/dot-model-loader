@@ -11,7 +11,7 @@ function handleModelFile(inputEventParams) {
   const fileReader = new FileReader();
 
   fileReader.onload = (fileLoadParams) => {
-    const model = Wwdc2010ModelLoader.load(fileLoadParams.target.result);
+    const model = DotModelLoader.load(fileLoadParams.target.result);
     console.log(model);
   }
 

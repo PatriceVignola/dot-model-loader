@@ -12,8 +12,5 @@
     "tagAnnotation": "Release v%s",
     "commitMessage": "Release v%s"
   },
-  "npm": {
-    "publish": false
-  },
   "requireUpstream": false
 }

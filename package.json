@@ -13,7 +13,7 @@
     "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
     "build-dist": "webpack",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist",
-    "release": "yarn build && yarn validate && yarn release-it"
+    "release": "yarn build && yarn validate && npm adduser && yarn release-it"
   },
   "husky": {
     "hooks": {

@@ -1,0 +1,19 @@
+{
+  "github": {
+    "release": true,
+    "assets": "dist/*js",
+    "releaseName": "Release v%s"
+  },
+  "src": {
+    "tag": true,
+    "tagName": "v%s",
+    "commit": true,
+    "push": true,
+    "tagAnnotation": "Release v%s",
+    "commitMessage": "Release v%s"
+  },
+  "npm": {
+    "publish": false
+  },
+  "requireUpstream": false
+}

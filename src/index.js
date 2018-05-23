@@ -3,6 +3,6 @@
  * @flow
  */
 
-import DotModelLoader from './loaders/DotModelLoader';
+import loadDotModel from './model/loadDotModel';
 
-export default DotModelLoader;
+export default loadDotModel;

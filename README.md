@@ -8,8 +8,6 @@ The loader was originally made to help with the conversion of the GLEssentials [
 
 Dot Model Loader can be used in pure JavaScript applications runnable directly in the browser, as well as any ES5 and ES6 applications ([Node.js](https://nodejs.org/), [React](https://reactjs.org/), [React Native](https://facebook.github.io/react-native/), [React Native Web](https://github.com/necolas/react-native-web), etc). In the near future, it will also be possible to run it directly from the CLI.
 
----
-
 ## Getting Started
 
 You can install the library with `yarn`:
@@ -21,11 +19,9 @@ You can also use `npm` if you prefer:
 npm install dot-model-loader --save
 ```
 
----
-
 ## Usage
 
-So far, the public API is very simple and you only need to call the following function: `DotModelLoader.load()`. Here's how you can use use it to build an app on different environments.
+So far, the public API is very simple and you only need to call the following function: `loadDotModel(buffer: ArrayBuffer)`. Here's how you can use use it to build an app on different environments.
 
 ### Pure JavaScript
 
@@ -51,25 +47,15 @@ Coming soon...
 
 Coming soon...
 
----
-
 ## Examples
 
 To run the examples, follow the following steps depending on your platform:
 
 ### Pure JavaScript
 
-Using `yarn`:
-```sh
-cd examples/pure-javascript-example && yarn install
-```
+First, make sure to run `yarn build` or `npm run build`. This will generate the `dist/dot-model-loader.min.js` file used in the example.
 
-Using `npm`:
-```sh
-cd examples/pure-javascript-example && npm install
-```
-
-Then, simply drag and drop `example.html` in your favorite browser and select the [demon.model](https://github.com/PatriceVignola/dot-model-loader/blob/master/models/demon.model) file available in the models folder at the root of this repository. You will see the indices, vertices, UVs and normals of the model.
+Then, simply drag and drop `example.html` in your favorite browser and select the [demon.model](https://github.com/PatriceVignola/dot-model-loader/blob/master/models/demon.model) file available in the models folder at the root of this repository. The console will print the indices, vertices, UVs and normals of the model.
 
 In the future, you will also be able to preview the model in a WebGL view but since this module is a loader and not a viewer, this is not a priority.
 
@@ -88,3 +74,7 @@ Coming soon...
 ### Babylon.js
 
 Coming soon...
+
+## License
+
+Dot Model Loader is [MIT licensed](https://github.com/PatriceVignola/dot-model-loader/blob/master/LICENSE).

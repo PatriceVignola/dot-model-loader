@@ -175,46 +175,50 @@ function parseNormalCoordinates(streamReader: StreamReader): number[] {
   );
 }
 
-class DotModelLoader {
-  static load(buffer: ArrayBuffer) {
-    const streamReader = new StreamReader(buffer, true);
+/**
+ * Loads a 3D model from a .model file buffer
+ *
+ * @param {ArrayBuffer} buffer .model file buffer
+ * @return {Object} 3D model information
+ */
+function loadDotModel(buffer: ArrayBuffer) {
+  const streamReader = new StreamReader(buffer, true);
 
-    // File identifier
-    streamReader.skipBytes(32);
+  // File identifier
+  streamReader.skipBytes(32);
 
-    // Major version
-    streamReader.skipBytes(4);
+  // Major version
+  streamReader.skipBytes(4);
 
-    // Minor version
-    streamReader.skipBytes(4);
+  // Minor version
+  streamReader.skipBytes(4);
 
-    // Header size
-    streamReader.skipBytes(4);
+  // Header size
+  streamReader.skipBytes(4);
 
-    const indicesOffset = streamReader.readUint32();
-    const vertexCoordinatesOffset = streamReader.readUint32();
-    const uvCoordinatesOffset = streamReader.readUint32();
-    const normalCoordinatesOffset = streamReader.readUint32();
+  const indicesOffset = streamReader.readUint32();
+  const vertexCoordinatesOffset = streamReader.readUint32();
+  const uvCoordinatesOffset = streamReader.readUint32();
+  const normalCoordinatesOffset = streamReader.readUint32();
 
-    streamReader.seek(indicesOffset);
-    const indices = parseIndices(streamReader);
+  streamReader.seek(indicesOffset);
+  const indices = parseIndices(streamReader);
 
-    streamReader.seek(vertexCoordinatesOffset);
-    const vertexCoordinates = parseVertexCoordinates(streamReader);
+  streamReader.seek(vertexCoordinatesOffset);
+  const vertexCoordinates = parseVertexCoordinates(streamReader);
 
-    streamReader.seek(uvCoordinatesOffset);
-    const uvCoordinates = parseUVCoordinates(streamReader);
+  streamReader.seek(uvCoordinatesOffset);
+  const uvCoordinates = parseUVCoordinates(streamReader);
 
-    streamReader.seek(normalCoordinatesOffset);
-    const normalCoordinates = parseNormalCoordinates(streamReader);
+  streamReader.seek(normalCoordinatesOffset);
+  const normalCoordinates = parseNormalCoordinates(streamReader);
 
-    return {
-      indices,
-      vertexCoordinates,
-      uvCoordinates,
-      normalCoordinates,
-    };
-  }
+  return {
+    indices,
+    vertexCoordinates,
+    uvCoordinates,
+    normalCoordinates,
+  };
 }
 
-export default DotModelLoader;
+export default loadDotModel;

@@ -1,6 +1,6 @@
 {
   "name": "dot-model-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A lightweight JavaScript loader for .model 3D files",
   "main": "./lib/index.js",
   "scripts": {

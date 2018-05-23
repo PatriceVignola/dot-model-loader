@@ -1,4 +1,6 @@
-# Dot Model Loader &middot; [![Circle CI Status](https://circleci.com/gh/PatriceVignola/dot-model-loader.svg?style=shield)](https://circleci.com/gh/PatriceVignola/dot-model-loader) [![Coverage Status](https://coveralls.io/repos/github/PatriceVignola/dot-model-loader/badge.svg?branch=master)](https://coveralls.io/github/PatriceVignola/dot-model-loader?branch=master) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
+# Dot Model Loader
+
+[![Circle CI Status](https://circleci.com/gh/PatriceVignola/dot-model-loader.svg?style=shield)](https://circleci.com/gh/PatriceVignola/dot-model-loader) [![Coverage Status](https://coveralls.io/repos/github/PatriceVignola/dot-model-loader/badge.svg?branch=master)](https://coveralls.io/github/PatriceVignola/dot-model-loader?branch=master) [![npm version](https://badge.fury.io/js/dot-model-loader.svg)](https://badge.fury.io/js/dot-model-loader) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
 
 A lightweight JavaScript loader for .model 3D files.
 

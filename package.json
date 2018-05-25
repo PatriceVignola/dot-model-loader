@@ -11,8 +11,9 @@
     "validate": "run-p lint flow test --silent",
     "build-clean": "rimraf lib dist coverage",
     "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
-    "build-dist": "webpack",
-    "build": "yarn build-clean && yarn build-lib && yarn build-dist",
+    "build-dist": "ROLLUP_ENV=development rollup -c -o dist/dot-model-loader.js",
+    "build-dist-min": "ROLLUP_ENV=production rollup -c -o dist/dot-model-loader.min.js",
+    "build": "yarn build-clean && yarn build-lib && yarn build-dist && yarn build-dist-min",
     "release": "yarn build && yarn validate && npm adduser && yarn release-it"
   },
   "husky": {
@@ -70,10 +71,10 @@
     "prettier": "1.12.1",
     "release-it": "^7.4.5",
     "rimraf": "^2.6.2",
-    "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3",
-    "webpack-dev-server": "^3.1.4"
+    "rollup": "^0.59.3",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "uglify-es": "^3.3.9"
   },
   "dependencies": {
     "file-stream-reader": "^1.0.1"

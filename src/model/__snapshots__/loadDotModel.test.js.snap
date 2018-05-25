@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DotModelLoader parses float64 UV coordinates correctly 1`] = `
+exports[`loadDotModel parses float64 UV coordinates correctly 1`] = `
 Array [
   0.002921334933489561,
   0.03515911102294922,
@@ -8775,7 +8775,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses float64 normal coordinates correctly 1`] = `
+exports[`loadDotModel parses float64 normal coordinates correctly 1`] = `
 Array [
   1.2119399928067764e-9,
   0.9636725187301636,
@@ -21935,7 +21935,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses float64 vertex coordinates correctly 1`] = `
+exports[`loadDotModel parses float64 vertex coordinates correctly 1`] = `
 Array [
   0,
   103.722900390625,
@@ -35095,7 +35095,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses the model correctly 1`] = `
+exports[`loadDotModel parses the model correctly 1`] = `
 Array [
   0,
   1,
@@ -71220,7 +71220,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses the model correctly 2`] = `
+exports[`loadDotModel parses the model correctly 2`] = `
 Array [
   0,
   103.722900390625,
@@ -97535,7 +97535,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses the model correctly 3`] = `
+exports[`loadDotModel parses the model correctly 3`] = `
 Array [
   0.002921334933489561,
   0.03515911102294922,
@@ -115080,7 +115080,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses the model correctly 4`] = `
+exports[`loadDotModel parses the model correctly 4`] = `
 Array [
   1.2119399928067764e-9,
   0.9636725187301636,
@@ -141395,7 +141395,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses uint8 indices correctly 1`] = `
+exports[`loadDotModel parses uint8 indices correctly 1`] = `
 Array [
   0,
   1,
@@ -177520,7 +177520,7 @@ Array [
 ]
 `;
 
-exports[`DotModelLoader parses uint16 indices correctly 1`] = `
+exports[`loadDotModel parses uint16 indices correctly 1`] = `
 Array [
   0,
   1,

@@ -23,8 +23,6 @@ npm install dot-model-loader --save
 
 ## Usage
 
-So far, the public API is very simple and you only need to call the following function: `loadDotModel(buffer: ArrayBuffer)`. Here's how you can use use it to build an app on different environments.
-
 ### Pure JavaScript
 
 Coming soon...

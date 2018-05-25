@@ -8,7 +8,7 @@ import path from 'path';
 
 import loadDotModel from './loadDotModel';
 
-describe('DotModelLoader', () => {
+describe('loadDotModel', () => {
   const modelPath = path.resolve(__dirname, '../../models', 'demon.model');
   const {buffer} = fs.readFileSync(modelPath);
 

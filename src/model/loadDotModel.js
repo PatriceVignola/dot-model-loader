@@ -165,7 +165,6 @@ function parseNormalCoordinates(streamReader: StreamReader): number[] {
     return [...Array(numCoordinates)].map(() => streamReader.readFloat32());
   }
 
-  // TODO: Add test case for this one
   if (coordinateSize === 8) {
     return [...Array(numCoordinates)].map(() => streamReader.readFloat64());
   }

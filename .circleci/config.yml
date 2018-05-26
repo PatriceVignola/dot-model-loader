@@ -23,10 +23,7 @@ jobs:
           name: Removing Cache Version file
           command: rm cache_version
       - run:
-          name: Transpiling for ES5 and Dist
-          command: yarn build
-      - run:
-          name: Testing, Linting and Static Checking
+          name: Testing, Linting, Static Checking and Building
           command: yarn validate
       - run:
           name: Generating Coveralls Report

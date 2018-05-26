@@ -8,7 +8,7 @@
     "test": "jest --coverage",
     "lint": "eslint .",
     "flow": "flow",
-    "validate": "run-p lint flow test --silent",
+    "validate": "run-p lint flow test build --silent",
     "build-clean": "rimraf lib dist coverage",
     "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
     "build-dist": "ROLLUP_ENV=development rollup -c -o dist/load-dot-model.js",

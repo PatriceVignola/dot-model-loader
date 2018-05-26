@@ -6,10 +6,10 @@
 import fs from 'fs';
 import path from 'path';
 
-import loadDotModel from './loadDotModel';
+import loadDotModel from './index';
 
 describe('loadDotModel', () => {
-  const modelPath = path.resolve(__dirname, '../../models', 'demon.model');
+  const modelPath = path.resolve(__dirname, '../models', 'demon.model');
   const {buffer} = fs.readFileSync(modelPath);
 
   it('parses the model correctly', async () => {

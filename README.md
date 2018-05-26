@@ -27,23 +27,7 @@ npm install load-dot-model --save
 
 Coming soon...
 
-### ES5
-
-Coming soon...
-
-### ES6
-
-Coming soon...
-
-### React
-
-Coming soon...
-
-### React Native
-
-Coming soon...
-
-### Babylon.js
+### ES5/ES6
 
 Coming soon...
 
@@ -77,4 +61,4 @@ Coming soon...
 
 ## License
 
-Dot Model Loader is [MIT licensed](https://github.com/PatriceVignola/load-dot-model/blob/master/LICENSE).
+load-dot-model is [MIT licensed](https://github.com/PatriceVignola/load-dot-model/blob/master/LICENSE).

@@ -1,7 +1,6 @@
 {
   "presets": [
-    "env",
-    "jest"
+    "env"
   ],
   "plugins": [
     "transform-flow-strip-types"

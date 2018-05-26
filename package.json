@@ -1,7 +1,7 @@
 {
-  "name": "dot-model-loader",
-  "version": "1.1.0",
-  "description": "A lightweight JavaScript loader for .model 3D files",
+  "name": "load-dot-model",
+  "version": "0.0.1",
+  "description": "Load .model 3D files in JavaScript.",
   "main": "./lib/index.js",
   "scripts": {
     "prettier": "prettier es6 --write src/**/*.js",
@@ -11,8 +11,8 @@
     "validate": "run-p lint flow test --silent",
     "build-clean": "rimraf lib dist coverage",
     "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/",
-    "build-dist": "ROLLUP_ENV=development rollup -c -o dist/dot-model-loader.js",
-    "build-dist-min": "ROLLUP_ENV=production rollup -c -o dist/dot-model-loader.min.js",
+    "build-dist": "ROLLUP_ENV=development rollup -c -o dist/load-dot-model.js",
+    "build-dist-min": "ROLLUP_ENV=production rollup -c -o dist/load-dot-model.min.js",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist && yarn build-dist-min",
     "release": "yarn build && yarn validate && npm adduser && yarn release-it"
   },
@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PatriceVignola/dot-model-loader.git"
+    "url": "git+https://github.com/PatriceVignola/load-dot-model.git"
   },
   "keywords": [
     "wwdc2010",
@@ -42,9 +42,9 @@
   "author": "Patrice Vignola",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PatriceVignola/dot-model-loader/issues"
+    "url": "https://github.com/PatriceVignola/load-dot-model/issues"
   },
-  "homepage": "https://github.com/PatriceVignola/dot-model-loader#readme",
+  "homepage": "https://github.com/PatriceVignola/load-dot-model#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

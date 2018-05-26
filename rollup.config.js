@@ -8,7 +8,7 @@ const config = {
   input: 'src/index.js',
   output: {
     format: 'iife',
-    name: 'DotModelLoader',
+    name: 'loadDotModel',
   },
   plugins: [
     flow({

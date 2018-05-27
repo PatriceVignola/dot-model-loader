@@ -1,6 +1,6 @@
 {
   "name": "load-dot-model",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Load .model 3D files in JavaScript.",
   "main": "./lib/index.js",
   "scripts": {

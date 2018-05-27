@@ -10,6 +10,14 @@ const glPoints = 0;
 const glUnsignedInt = 5125;
 const glFloat = 5126;
 
+export type DotModel = {
+  indices: number[],
+  vertexCoordinates: number[],
+  uvCoordinates: number[],
+  normalCoordinates: number[],
+  numVerticesPerFace: number,
+};
+
 function parseIndices(streamReader: StreamReader): number[] {
   const bufferSize = streamReader.readUint32();
   const indexType = streamReader.readUint32();
@@ -180,7 +188,7 @@ function parseNormalCoordinates(streamReader: StreamReader): number[] {
  * @param {ArrayBuffer} buffer .model file buffer
  * @return {Object} 3D model information
  */
-function loadDotModel(buffer: ArrayBuffer) {
+function loadDotModel(buffer: ArrayBuffer): DotModel {
   const streamReader = new StreamReader(buffer, true);
 
   // File identifier

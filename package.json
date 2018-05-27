@@ -10,7 +10,7 @@
     "flow": "flow",
     "validate": "run-p lint flow test build --silent",
     "build-clean": "rimraf lib dist coverage",
-    "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/ && yarn fix-generated-flow",
+    "build-lib": "babel src -d lib --ignore '**/*.test.js' && flow gen-flow-files src/ --out-dir lib/ --ignore '.*/src/.*\\.test\\.js' && yarn fix-generated-flow",
     "build-dist": "ROLLUP_ENV=development rollup -c -o dist/load-dot-model.js",
     "build-dist-min": "ROLLUP_ENV=production rollup -c -o dist/load-dot-model.min.js",
     "build": "yarn build-clean && yarn build-lib && yarn build-dist && yarn build-dist-min",

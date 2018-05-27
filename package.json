@@ -1,6 +1,6 @@
 {
   "name": "load-dot-model",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Load .model 3D files in JavaScript.",
   "main": "./lib/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "release": "yarn validate && npm adduser && yarn release-it",
     "fix-generated-functions": "replace-in-file \"/default function(\\(.*\\)):/\" \"default \\$1 =>\" 'lib/**/*.js.flow'  --isRegex",
     "fix-generated-classes": "replace-in-file \"/default class(.*){/\" \"default class ExportedDefaultClass\\$1{\" 'lib/**/*.js.flow' --isRegex",
-    "fix-generated-flow" : "yarn fix-generated-functions && yarn fix-generated-classes"
+    "fix-generated-flow": "yarn fix-generated-functions && yarn fix-generated-classes"
   },
   "husky": {
     "hooks": {

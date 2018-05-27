@@ -39,7 +39,7 @@ To run the examples, follow the following steps depending on your platform:
 
 First, make sure to run `yarn build` or `npm run build`. This will generate the `dist/load-dot-model.min.js` file used in the example.
 
-Then, simply drag and drop `example.html` in your favorite browser and select the [demon.model](https://github.com/PatriceVignola/load-dot-model/blob/master/models/demon.model) file available in the models folder at the root of this repository. The console will print the indices, vertices, UVs and normals of the model.
+Then, simply drag and drop `example.html` in your favorite browser and select the [demon.model](https://github.com/PatriceVignola/load-dot-model/blob/master/models/demon.model) file available in the models folder at the root of this repository. The console will print the indices, vertices, UVs and normals of the model. Although the loader only supports models with triangle faces for now, the data also contains an integer `numVerticesPerFace` since other face types (e.g. rectangles) might be added in the future.
 
 In the future, you will also be able to preview the model in a WebGL view but since this module is a loader and not a viewer, this is not a priority.
 

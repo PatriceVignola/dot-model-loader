@@ -14,10 +14,7 @@ describe('loadDotModel', () => {
 
   it('parses the model correctly', async () => {
     const model = loadDotModel(buffer);
-    expect(model.indices).toMatchSnapshot(); // 36120 indices
-    expect(model.vertexCoordinates).toMatchSnapshot(); // 26310 vertex coords
-    expect(model.uvCoordinates).toMatchSnapshot(); // 17540 UV coords
-    expect(model.normalCoordinates).toMatchSnapshot(); // 26310 normal coords
+    expect(model).toMatchSnapshot();
   });
 
   it('parses uint16 indices correctly', () => {

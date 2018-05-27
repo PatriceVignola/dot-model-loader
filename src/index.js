@@ -217,6 +217,7 @@ function loadDotModel(buffer: ArrayBuffer) {
     vertexCoordinates,
     uvCoordinates,
     normalCoordinates,
+    numVerticesPerFace: 3,
   };
 }
 

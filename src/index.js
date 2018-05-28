@@ -16,6 +16,7 @@ export type DotModel = {
   uvCoordinates: number[],
   normalCoordinates: number[],
   numVerticesPerFace: number,
+  numCoordinatesPerVertex: number,
 };
 
 function parseIndices(streamReader: StreamReader): number[] {

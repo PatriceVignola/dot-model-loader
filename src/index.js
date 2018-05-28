@@ -226,6 +226,7 @@ function loadDotModel(buffer: ArrayBuffer): DotModel {
     uvCoordinates,
     normalCoordinates,
     numVerticesPerFace: 3,
+    numCoordinatesPerVertex: 3,
   };
 }
 

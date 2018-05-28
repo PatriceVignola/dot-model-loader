@@ -97531,6 +97531,7 @@ Object {
     -0.1933857947587967,
     -0.7361863851547241,
   ],
+  "numCoordinatesPerVertex": 3,
   "numVerticesPerFace": 3,
   "uvCoordinates": Array [
     0.002921334933489561,
